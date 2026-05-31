@@ -1,3 +1,59 @@
 h1 {
     color: red;
 }
+.page-header {
+    max-width: 1920px;      
+    margin: 0 auto 100.5px;         
+    padding: 20px 30px;    
+}
+
+.main {
+width: 100%;
+}
+
+.home {
+max-width: 1337px;
+margin: 0 auto;
+}
+
+.main-header {
+max-width: 990px;
+margin: 0 auto 100px;
+padding: 40px 20px;
+}
+
+.offers {
+max-width: 1334px;
+margin: 0 auto 100px;
+padding: 30px 20px;
+}
+
+.about {
+max-width: 1334px;
+margin: 0 auto 100px;
+padding: 40px 20px;
+}
+
+.upcoming {
+max-width: 1334px;
+margin: 0 auto 100px;
+padding: 40px 20px;
+}
+
+.listing {
+max-width: 1334px;
+margin: 0 auto 100px;
+padding: 40px 20px;
+}
+
+.contacts {
+max-width: 1334px;
+margin: 0 auto 100px;
+padding: 40px 20px;
+}
+
+.page-footer {
+max-width: 1337px;
+margin: 0 auto;
+padding: 60px 40px;
+}
