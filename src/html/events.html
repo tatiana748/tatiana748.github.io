@@ -4,12 +4,13 @@
   <body class="body">
     @@include('blocks/page-header.html')
     <main class="main">
-      <div class="events">
-       <section class="listing events__listing">
-       <h2 class="listing__section-title section-title">МЕРОПРИЯТИЯ</h2>
-       <div class="listing__events-list">
-       <!-- prettier-ignore -->
-       @@loop('blocks/event-card.html',[
+      <div class="container">
+       <div class="events">
+        <section class="listing events__listing">
+        <h2 class="listing__section-title section-title">МЕРОПРИЯТИЯ</h2>
+        <div class="listing__events-list">
+        <!-- prettier-ignore -->
+         @@loop('blocks/event-card.html',[
          {
            "class": "listing__event-card",
            "img": "assets/images/events/Nirvana.jpg",
@@ -57,6 +58,7 @@
          @@include('blocks/table.html')
        </section>    
       </div> 
+      </div>
     </main>    
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')

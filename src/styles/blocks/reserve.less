@@ -8,21 +8,183 @@
   width: 100%; 
   &__checks {
     grid-area: checks;
-    background-color: yellow;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
   }
 
   &__scheme {
     grid-area: scheme;
-    background-color: rgb(255, 162, 0);
   }
+  &__scheme-wrapper {
+    position: relative;
+    width: 100%;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 100%;
+      padding-top: 51.15384%; 
+    }
+  }
+
+  &__scene {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
 
   &__order {
     grid-area: order;
-    background-color: rgb(76, 0, 255);
+  }
+    &__section-title {
+    font-family: @font1;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    letter-spacing: 0;
+    color: @black;
+    text-align: left;
+    margin: 0 0 23px 0;
   }
 
-  &__legend {
-    grid-area: legend;
-    background-color: rgb(255, 0, 81);
+  &__tickets-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
   }
-}
+  
+  
+   &__tickets {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &__qty {
+    &::after {
+      content: " " attr(data-caption) " | " attr(data-price);
+    }
+  }
+
+  &__sum {
+    &::after {
+      content: attr(data-currency);
+      margin-left: 4px;
+      font-size: 0.95em;
+    }
+  }
+
+  &__total {
+    &::before {
+      content: attr(data-caption);
+      margin-right: 30px;
+    }
+
+    &::after {
+      content: attr(data-currency);
+      margin-left: 4px;
+      font-size: 0.95em;
+    }
+  }
+  
+   &__submit {
+    width: 100%;
+    margin-top: 68px;              // ✅ отступ от Суммы до кнопки
+    padding: 15px 141px;           // ✅ по макету
+    background-color: @red;
+    color: @white;
+    border: none;
+    font-family: @font1;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.2s;
+
+    &:hover {
+      background-color: @red_dark;
+    }
+  } 
+    &__section-title {
+    font-family: @font1;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 25px;
+    color: @black;
+    margin: 0 0 23px 0;
+    text-align: right;              // ✅ текст заголовка справа
+    width: 100%;
+  }
+    &__legend {
+    grid-area: legend;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
+    }
+
+   &__legend-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    &__legend-list-item {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end; 
+      gap: 29px;
+      margin-bottom: 18px;
+      font-size: 14px;
+      color: @black;
+      text-align: right; 
+    }
+  
+  &__legend-ring {
+   display: inline-block;
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   flex-shrink: 0;
+   border: 1px solid @black;        // ✅ толщина 1px
+   background-color: transparent;
+  }
+  &__legend-ring--black {
+    border-color: @black;
+   
+  }
+  // Красное кольцо (смещено, чтобы заходить на чёрное)
+  &__legend-ring--red {
+    border-color: @red;
+                // смещение для пересечения
+  }
+
+  // ===== СЕРЫЙ КРУГ (забронировано) =====
+  &__legend-dot {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background-color: @gray_dark ;
+     &--gray {
+      background-color: @gray_dark;
+      border-color: @gray_dark;
+    }
+  }
+    
+  }
+
+
+  
+
+
+
+  
