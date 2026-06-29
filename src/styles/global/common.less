@@ -3,6 +3,11 @@ body {
   width: 100%;
   margin: 0;
   padding: 0;
+}
+body {
+  width: 100%;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
@@ -19,14 +24,21 @@ body {
   font-style: normal;
   line-height: 1.375;
   overflow-x: hidden;
+  @media @bw1660 {
+    padding-top: 111px;
+  }
+   @media @bw768{
+    padding-top: 70px;
+   }
 }
+
 
 .main {
   flex: 1 0 auto;
 }
 
 .page-footer {
-    flex: 0 0 auto;
+  flex: 0 0 auto;
 }  
 
 a {
@@ -43,15 +55,15 @@ img {
 input,
 textarea,
 select {
-    box-shadow: none;
-    outline: none;
-    color: @black;
-    font-family: @font1;
+  box-shadow: none;
+  outline: none;
+  color: @black;
+  font-family: @font1;
 }
 
 input,
 textarea {
-    &::placeholder {
+  &::placeholder {
     color: #6c6c6c;
     }
 }

@@ -5,7 +5,29 @@
   grid-template-areas: 
     "checks scheme"
     "order legend"; 
-  width: 100%; 
+  width: 100%;  
+  @media @bw1340 {
+    grid-template-columns: 340px 1fr;
+    gap: 65px 6.5%;
+  }
+
+  @media @bw1020 {
+    gap: 60px;
+    grid-template-columns: 1fr 390px;
+    grid-template-areas:
+    "scheme scheme"
+    "checks legend"
+    "checks order";
+  }
+
+  @media @bw768 {
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "scheme"
+      "legend"
+      "checks"
+      "order";
+  }
   &__checks {
     grid-area: checks;
     display: flex;
@@ -112,6 +134,17 @@
       background-color: @red_dark;
     }
   } 
+
+  
+  &__legend {
+    grid-area: legend;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    padding-right: 30px;
+    margin-top: 67px; /* Отступ от схемы */
+  }
+
     &__section-title {
     font-family: @font1;
     font-weight: 700;
@@ -121,21 +154,70 @@
     margin: 0 0 23px 0;
     text-align: right;              // ✅ текст заголовка справа
     width: 100%;
+  
   }
-    &__legend {
-    grid-area: legend;
+   &__section-title--note {
+    font-weight: 600;
+    padding-top: 40px; 
+    margin-bottom: 23px;
+   }  
+
+    
+
+    
+      /* ==========================================
+     БЛОК С ЦЕНАМИ
+     ========================================== */
+
+  &__price {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    padding-right: 30px;
-    }
+    gap: 18px; /* Расстояние между ценами 24px */
+    width: 100%;
+    margin: 0 0 37px 0;
+  }
 
-   &__legend-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-    }
+  &__price-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px;
+    font-family: @font1;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    color: @black;
+    margin: 0;
+    text-align: right;
+  }
 
+  /* квадрат  перед ценой */
+  &__price-dot {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    border-radius: 0; /* Квадрат */
+    flex-shrink: 0;
+    background-color: @black;
+
+    &--red {
+      background-color: @red
+    }
+  }
+
+  /* Текст "| 1 персона" */
+  &__price-label {
+    color: @black;
+    margin-left: 4px;
+    font-weight: 400;
+  }
+
+   // =============================================
+  // СПИСОК ЛЕГЕНДЫ
+  // =============================================
+  
+  
     &__legend-list-item {
       display: flex;
       align-items: center;
@@ -180,11 +262,4 @@
     }
   }
     
-  }
-
-
-  
-
-
-
-  
+}
