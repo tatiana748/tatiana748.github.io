@@ -27,7 +27,7 @@
         <div class="page-header__nav-user">
           <a href="#" class="page-header__nav-user-link">Александр C.</a>
           <a href="#" class="page-header__nav-logout">
-            <svg class="page-header__logout-icon" width="24" height="24">
+            <svg class="page-header__logout-icon">
               <use xlink:href="assets/icons/symbols.svg#logout" />
             </svg>
           </a>
@@ -47,67 +47,106 @@
   <main class="main">
     <!--<div class="container">-->
     <div class="events">
-      <section class="listing events__listing">
-        <h2 class="listing__section-title section-title">МЕРОПРИЯТИЯ</h2>
-        <div class="listing__events-list">
-          <!-- prettier-ignore -->
-          <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
-              <picture class="event-card__picture">
-                <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
-              </picture>
-              <h4 class="event-card__title">
-                Собираемся и слушаем альбом Nirvana. Nirvana
-              </h4>
 
-              <p class="event-card__description">
-                Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
-              </p>
+      <section class="upcoming events__upcoming">
+        <div class="upcoming__top-triangle"></div>
+        <div class="events__upcoming-wrapper">
 
-              <time datetime="2024-12-07T18:00" class="event-card__time">
-                07.12.2024 | начало 18.00
-              </time>
-            </a>
-          </article>
-          <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
-              <picture class="event-card__picture">
-                <img src="assets/images/events/HowStuffWorks.jpg" alt="HowStuffWorks" class="event-card__img" />
-              </picture>
-              <h4 class="event-card__title">
-                Есть тема, нужно обсудить с HowStuffWorks
-              </h4>
 
-              <p class="event-card__description">
-                Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.
-              </p>
+          <section class="listing events__listing">
+            <h2 class="listing__section-title section-title">МЕРОПРИЯТИЯ</h2>
+            <div class="listing__events-list">
+              <!-- prettier-ignore -->
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/events/Nirvana.jpg_mobile_webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/Nirvana.jpg_mobile" />
 
-              <time datetime="2024-12-14T18:30" class="event-card__time">
-                14.12.2024 | начало 18.30
-              </time>
-            </a>
-          </article>
-          <article class="event-card listing__event-card">
-            <a href="#" class="event-card__link">
-              <picture class="event-card__picture">
-                <img src="assets/images/events/Sade.jpg" alt="Sade" class="event-card__img" />
-              </picture>
-              <h4 class="event-card__title">
-                Вечер | The Best of Sade
-              </h4>
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/events/Nirvana-tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/Nirvana-tablet.jpg" />
 
-              <p class="event-card__description">
-                Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.
-              </p>
+                    <source type="image/webp" srcset="assets/images/events/Nirvana.webp" />
+                    <source srcset="assets/images/events/Nirvana.jpg" />
+                    <img src="assets/images/events/Nirvana.jpg" alt="nirvana" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">
+                    Собираемся и слушаем альбом Nirvana. Nirvana
+                  </h4>
 
-              <time datetime="2024-12-16T20:00" class="event-card__time">
-                16.12.2024 | начало 20.00
-              </time>
-            </a>
-          </article>
+                  <p class="event-card__description">
+                    Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.
+                  </p>
+
+                  <time datetime="2024-12-07T18:00" class="event-card__time">
+                    07.12.2024 | начало 18.00
+                  </time>
+                </a>
+              </article>
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/events/HowStuffWorks.jpg_mobile_webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/HowStuffWorks.jpg_mobile" />
+
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/events/HowStuffWorks-tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/HowStuffWorks-tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/HowStuffWorks.webp" />
+                    <source srcset="assets/images/events/HowStuffWorks.jpg" />
+                    <img src="assets/images/events/HowStuffWorks.jpg" alt="HowStuffWorks" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">
+                    Есть тема, нужно обсудить с HowStuffWorks
+                  </h4>
+
+                  <p class="event-card__description">
+                    Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.
+                  </p>
+
+                  <time datetime="2024-12-14T18:30" class="event-card__time">
+                    14.12.2024 | начало 18.30
+                  </time>
+                </a>
+              </article>
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg_mobile_webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/Sade.jpg_mobile" />
+
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/events/Sade-tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/Sade-tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Sade.webp" />
+                    <source srcset="assets/images/events/Sade.jpg" />
+                    <img src="assets/images/events/Sade.jpg" alt="Sade" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">
+                    Вечер | The Best of Sade
+                  </h4>
+
+                  <p class="event-card__description">
+                    Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.
+                  </p>
+
+                  <time datetime="2024-12-16T20:00" class="event-card__time">
+                    16.12.2024 | начало 20.00
+                  </time>
+                </a>
+              </article>
+            </div>
+            <a href="#" class="listing__link link">Смотреть все</a>
+          </section>
+
+
+
         </div>
-        <a href="#" class="listing__link link">Смотреть все</a>
+        <div class="upcoming__bottom"></div>
+
       </section>
+
+
 
       <section class="events__services">
         <h2 class="events__section-title section-title section-title--sub">
@@ -244,6 +283,11 @@
           </table>
         </div>
       </section>
+
+
+
+
+
     </div>
     <!--</div>-->
   </main>

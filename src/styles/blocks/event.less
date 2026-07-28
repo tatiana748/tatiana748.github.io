@@ -1,4 +1,228 @@
 .event {
  padding: 40px 0 150px;
+
+ &__header {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 70px;
+    font-weight: 500;
+    margin-bottom: 80px;
+    color: #1f1e1e;
+
+    @media (max-width: 1019px) {
+      font-size: 40px;           
+      margin: 40px 0 70px 0; 
+    }
+
+     @media (max-width: 767px) {
+      font-size: 40px;           
+      
+    }
+
+  
+    @media (max-width: 449px) {
+      font-size: 20px;          
+      margin: 80px 51px 40px 35px;
+    }
+  }
+
+  &__info-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 46px;  
+    width: 100%;
+   
+
+    @media (max-width: 767px) {
+    gap: 25px 
+    }
+  }
+
+  &__info-left {
+    text-align: right;
+    
+    min-width: 150px;
+    align-items: center;
+    
+
+    @media (max-width: 767px) {
+      text-align: center;
+    }
+    
+  }
+
+  &__info-center {
+    flex: 0 0 auto;
+    max-width: 600px;
+    
+    gap: 45px;
+
+    @media (max-width: 767px) {
+      max-width: 450px;
+    }
+    
+  }
+
+  }
+
+  &__info-right {
+    text-align: left;
+    flex: 1;
+    min-width: 150px;
+
+     @media (max-width: 768px) {
+      text-align: center;
+    }
+
+  }
+
+  &__date {
+    font-size: 30px;
+    font-weight: 300;
+    display: block;
+    color: #1f1e1e;
+    font-family: 'Mak', sans-serif;      
+    margin-bottom: 11px;        
+  }
+
+  &__place {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f1e1e;
+    font-family: 'Mak', sans-serif;  
+    margin-top: 10px;
+  }
+
+  &__picture {
+    display: block;
+    width: 100%;
+
+    @media (max-width: 1339px) {
+      max-width: 474px;         
+    }
+
+    @media (max-width: 1019px) {
+      max-width: 250px;         
+    }
+
+
+     @media (max-width: 767px) {
+      max-width: 250px;         
+    }
+
+    
+    @media (max-width: 449px) {
+      max-width: 245px;         
+    }
+  }
+
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    margin: 0 0 80px 0;
+  }
+
+   
+  
+
+  &__time {
+    font-size: 30px;
+    font-weight: 300;
+    color: #1f1e1e;
+    font-family: 'Mak', sans-serif;
+    margin: 0 12px 11px 0;                   
+    display: inline-block;  
+
+  }
+
+  &__label {
+    font-size: 16px;
+    font-weight: 700;
+    color: #1f1e1e;
+    font-family: 'Mak', sans-serif;
+    display: inline-block;        
+    margin: 0 0 0 0; 
+  }
+
+  &__address {
+    font-size: 16px;
+    font-weight: 700px;
+    color: #1f1e1e;
+    margin: 0;
+  }
+
+  @media (max-width: 767px) {
+    &__info-grid {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    &__info-left {
+      text-align: center;
+    }
+
+    &__info-right {
+      text-align: center;
+    }
+
+    &__title {
+      font-size: 28px;
+    }
+
+    &__time {
+      font-size: 32px;
+    }
+     &__label {
+      margin: 0 0 0 8px;         
+    }
+  }
+
+// ===== ХЛЕБНЫЕ КРОШКИ =====
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 40px 0 20px;
+  font-size: 16px;
+  font-family: 'Open Sans', sans-serif;
+  color: #1f1e1e;
+
+   @media (max-width: 767px) {
+    font-size: 14px;
+    gap: 8px;
+    
+  }
+
+  @media (max-width: 449px) {
+    display: none;
+  }
+
+  &__link {
+    color: #1f1e1e;
+    text-decoration: none;
+    transition: color 0.2s;
+
+    &:hover {
+      color: #1f1e1e;
+    }
+  }
+
+  &__separator {
+    color: #999;
+  }
+
+  &__current {
+    color: #1f1e1e;
+    font-weight: 500;
+  }
 }
+
 

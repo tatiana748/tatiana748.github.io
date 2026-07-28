@@ -1,6 +1,14 @@
 <article class="event-card @@class">
     <a href="#" class="event-card__link">
         <picture class="event-card__picture">
+            <source type="image/webp" media="(max-width: 450px)" srcset="@@img_mobile_webp"/>
+            <source media="(max-width: 450px)" srcset="@@img_mobile"/>
+
+            <source type="image/webp" media="(max-width: 1169px)" srcset="@@img_tablet_webp"/>
+            <source media="(max-width: 1169px)" srcset="@@img_tablet"/>
+
+            <source type="image/webp" srcset="@@img_webp"/>
+            <source srcset="@@img"/>
             <img 
             src="@@img" 
             alt="@@alt" 

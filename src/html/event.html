@@ -5,7 +5,76 @@
    @@include('blocks/page-header.html') 
     <main class="main">
       <div class="container">
+      
+        
+        <!--  ХЛЕБНЫЕ КРОШКИ  -->
+        <div class="breadcrumbs">
+          <a href="/" class="breadcrumbs__link">Главная</a>
+          <span class="breadcrumbs__separator">/</span>
+          <a href="events.html" class="breadcrumbs__link">Мероприятия</a>
+          <span class="breadcrumbs__separator">/</span>
+          <span class="breadcrumbs__current">Вечер | The Best of Sade</span>
+        </div>
+
+
+
       <article class="event">
+
+
+         <!-- БЛОК С ИЗОБРАЖЕНИЕМ -->
+           <section class="event__header">
+            <h1 class="event__title">Вечер | The Best of Sade</h1>
+
+              
+            
+            <div class="event__info-grid">
+             
+              <div class="event__info-left">
+                <time class="event__date" datetime="2026-12-16">
+                  16/12/2026
+                </time>
+                <p class="event__place">Кафе «Птичка»</p>
+              </div>
+
+              <!-- Центр: Фото -->
+              <div class="event__info-center">
+                <picture class="event__picture">
+                 
+                  <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/event/Sade-mobile.webp"/>
+                  <source media="(max-width: 450px)" srcset="assets/images/event/Sade-mobile.jpg"/>
+                  
+                  
+                  <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/event/Sade-tablet.webp"/>
+                  <source media="(max-width: 1169px)" srcset="assets/images/event/Sade-tablet.jpg"/>
+                  
+                 
+                  <source type="image/webp" srcset="assets/images/event/Sade.webp"/>
+                  <source srcset="assets/images/events/Sade.jpg"/>
+                  
+                 
+                  <img 
+                    src="assets/images/events/Sade.jpg" 
+                    alt="Вечер | The Best of Sade" 
+                    class="event__img"
+                    loading="lazy"
+                  />
+                </picture>
+              </div>
+
+              <div class="event__info-right">
+                <div class="event__time-wrapper">
+                  <p class="event__time">20.00</p>
+                  <span class="event__label">начало</span>
+                </div>
+                <p class="event__address">Ленина 10 | 2 этаж</p>
+              </div>
+
+            </div>
+            
+          </section>
+          <!--  КОНЕЦ  -->
+
+
        
         <div class="event__content content">
           <h5>

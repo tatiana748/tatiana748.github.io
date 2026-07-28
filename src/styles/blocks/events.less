@@ -1,8 +1,75 @@
 .events {
   padding: 140px 0 100px;
 
+  
 
   &__listing {
     margin-bottom: 100px;
+    background-color: rgba(255, 255, 255, 0.6);
+  
+  }
+  // ===== (треугольники) =====
+  &__upcoming {
+    position: relative;
+    margin-bottom: 0;
+    
+    // ===== ВЕРХНИЙ ТРЕУГОЛЬНИК =====
+    .upcoming__top-triangle {
+      position: absolute;
+      width: 100%;
+      margin-top: -40px;
+      
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        bottom: 0;
+      }
+      
+      &::before {
+        left: 0;
+        border-right: 40vw solid transparent;
+        border-bottom: 40px solid rgba(255, 255, 255, 0.6);
+      }
+      
+      &::after {
+        right: 0;
+        border-left: 60vw solid transparent;
+        border-bottom: 40px solid rgba(255, 255, 255, 0.6);
+      }
+    }
+    
+    // ===== НИЖНИЙ ТРЕУГОЛЬНИК =====
+    .upcoming__bottom {
+      position: absolute;
+      width: 100%;
+      margin-top: 100px;
+      
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        display: block;
+        width: 0;
+        height: 0;
+        top: 0;
+      }
+      
+      &::before {
+        right: 0;
+        border-left: 40vw solid transparent;
+        border-top: 40px solid rgba(255, 255, 255, 0.6);
+      }
+      
+      &::after {
+        left: 0;
+        border-right: 60vw solid transparent;
+        border-top: 40px solid rgba(255, 255, 255, 0.6);
+      }
+    }
   }
 }
+
