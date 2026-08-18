@@ -7,25 +7,21 @@
         <div class="home">
            
             <header class="main-header home__main-header">
-               <h1>АРТ-ПРОСТРАНСТВО</h1>
+               <h1 class="main-header__title">АРТ-ПРОСТРАНСТВО</h1>
                <picture class="main-header__picture">
                <img src="assets/images/lenni.jpg" alt="ART-ПРОСТРАНСТВО">
                </picture>
-               <p>для людей, горящих сердцем и делом 
-                 место для настоящего</p>
+               <p class="main-header__text">
+                для людей, горящих сердцем и делом 
+                место для настоящего
+              </p>
             </header>
           
-           
-           
-            <section class="offers home__offers">
-              
-                <h4 class="offers__title">я хочу:</h4>  
-                <div class="offers__btns">
-                  <button class="offers__btn btn btn--red" type="button">Провести мероприятие</button>
-                  <button class="offers__btn btn" type="button">Стать арендатором</button>
-                </div>
-              
-            </section> 
+           <!-- prettier-ignore -->
+           @@include('blocks/offers.html', {"class": "home__offers"})
+        
+            
+      <section class="about class">    
 
         <div class="about__container">  
           
@@ -46,14 +42,16 @@
              <picture class="about__picture">
               <source media="(max-width: 767px)" type="image/webp" srcset="assets/images/pic.webp">
               <source media="(max-width: 1339px)" type="image/webp" srcset="assets/images/pic.webp">
+              <source type="image/webp" srcset="assets/images/pic.webp" />
               <img src="assets/images/pic.jpg" class="about__img" alt="pic">
              </picture>
 
              <picture class="about__picture2">
               <source media="(max-width: 767px)" type="image/webp" srcset="assets/images/pic2.webp">
               <source media="(max-width: 1339px)" type="image/webp" srcset="assets/images/pic2.webp">
-              <img src="assets/images/pic2.jpg" class="about__img" alt="pic2">
-            </picture>
+              <source type="image/webp" srcset="assets/images/pic2.webp" />
+              <img src="assets/images/pic2.jpg" class="about__img" alt="pic2" />
+             </picture>
 
             <h3 class="about__title about__title--w868 about__title--2">
               Мы предоставляем площади для вашего мероприятия
@@ -80,39 +78,52 @@
                провели более 100 проектов. 
                Посмотрите, как это было классно.
               </p>
-              <a href="#" class="about__link link flex">
-              <span class="link__name">Смотреть</span>
-              <svg class="link__icon link__icon--about" width="91px" height="60px">
-                <use xlink:href="assets/icons/symbols.svg#link"></use>
+              <a href="#" class="about__link link">
+               <span class="link__name">Смотреть</span>
+               <svg class="link__icon link__icon--about" width="91px" height="60px">
+                 <use xlink:href="assets/icons/symbols.svg#link"></use>
              </svg>
               </a>
              </div>
            </div>
-        </div> 
+        
   
 
 
         </div>
-
+      </section> 
 
       <!-- prettier-ignore-->
-       @@include('blocks/blog-listing.html', {"class": "home__listing"})
+      @@include('blocks/upcoming.html', {"class": "home__upcoming"})
 
-        <section class="contacts home__contacts">
-          <h2 class="contacts__section-title section-title">Контакты</h2>
-          <div class="contacts__container"></div>
-        </section>
+      <!-- prettier-ignore-->
+      @@include('blocks/blog-listing.html', {"class": "home__listing"})
 
-        <div class="doit">
-          <p class="doit__text">
-             <span class="doit__row1">Просто делайте, что нравится,</span>
-             <span class="doit__row2">а мы вам поможем</span>
-          </p>
+      <!-- prettier-ignore-->
+      @@include('blocks/contacts.html', {"class": "home__contacts"})
+
+        
+       
+       <div class="doit home__doit">
+         <div class="doit__text1">
+            <p class="doit__text">Просто делайте,</p>
+            <p class="doit__text doit__text--r">что нравится,</p>
+         </div>
+         <p class="doit__text doit__text--mt20">а мы вам поможем</p>
         </div>
+      
 
     </main>  
     @@include('blocks/page-footer.html')
     @@include('blocks/event-pp.html')
+
+
+    <script 
+      src="https://maps.googleapis.com/maps/api/js?key=" 
+    ></script>
+
+    <script src="scripts/swiper.min.js"></script>
+    <script src="scripts/main.min.js"></script>
   </body>
 
 </html>

@@ -1,0 +1,118 @@
+<section class="upcoming @@class">
+    <div class="upcoming__wrapper">
+        <div class="upcoming__container">
+            <h2 class="upcoming__title section-title">
+                Мероприятия
+            </h2>
+            <div class="upcoming__swiper swiper swiper--3s js-swiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                      
+                        @@include('event-card.html', {
+                            "class": "",
+                            "img": "assets/images/events/Nirvana.jpg",
+                            "img_webp": "assets/images/events/Nirvana.webp",       
+                            "img_tablet": "assets/images/events/Nirvana-tablet.jpg",  
+                            "img_tablet_webp": "assets/images/events/Nirvana-tablet.webp",  
+                            "alt": "nirvana",
+                            "title": "Собираемся и слушаем альбом Nirvana. Nirvana",
+                            "descr": "Это третий альбом группы, выпущенный после смерти Курта Кобейна и первый, содержащий студийный материал.",
+                            "datetime": "2024-12-07T18:00",
+                            "time": "07.12.2024 | начало 18.00"
+                        })
+                    </div>
+                     <div class="swiper-slide">
+                        @@include('event-card.html', {
+                            "class": "",
+                             "img": "assets/images/events/HowStuffWorks.jpg",
+                             "img_webp": "assets/images/events/HowStuffWorks.webp",  
+                             "img_tablet": "assets/images/events/HowStuffWorks-tablet.jpg", 
+                             "img_tablet_webp": "assets/images/events/HowStuffWorks-tablet.webp",  
+                             "alt": "HowStuffWorks",
+                             "title": "Есть тема, нужно обсудить с HowStuffWorks",
+                             "descr": "Один из самых популярных подкастов в мире. В нём авторы объясняют, как устроены разные вещи.",
+                             "datetime": "2024-12-14T18:30",
+                             "time": "14.12.2024 | начало 18.30"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                            "class": "",
+                              "img": "assets/images/events/Sade.jpg",
+                              "img_webp": "assets/images/events/Sade.webp",           
+                              "img_tablet": "assets/images/events/Sade-tablet.jpg",     
+                              "img_tablet_webp": "assets/images/events/Sade-tablet.webp",  
+                              "alt": "Sade",
+                              "title": "Вечер | The Best of Sade",
+                              "descr": "Музыка группы имеет эклектичный характер, сочетая в себе элементы музыки соул, джаза, ритм-блюза и фанка.",
+                              "datetime": "2024-12-16T20:00",
+                              "time": "16.12.2024 | начало 20.00"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                            "class": "",
+                               "img": "assets/images/events/Malevish.jpg",
+                               "img_webp": "assets/images/events/Malevish.webp",           
+                               "img_tablet": "assets/images/events/Malevish-tablet.jpg",     
+                               "img_tablet_webp": "assets/images/events/Malevish-tablet.webp",  
+                               "alt": "Malevish",
+                               "title": "Выставка Малевича в Томске",
+                               "descr": "Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.",
+                               "datetime": "2026-12-23T20:00",
+                               "time": "23.12.2026 | начало 20.00"
+                        })
+                    </div>
+                    <div class="swiper-slide">
+                        @@include('event-card.html', {
+                            "class": "",
+                                "img": "assets/images/events/art.jpg",
+                                "img_webp": "assets/images/events/art.webp",           
+                                "img_tablet": "assets/images/events/art-tablet.jpg",     
+                                "img_tablet_webp": "assets/images/events/art-tablet.webp",  
+                                "alt": "art",
+                                "title": "Мастер — класс по студийной съемке от Tatler",
+                                "descr": "Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.",
+                                "datetime": "2026-12-25T13:00",
+                                "time": "25.12.2026 | начало 13.00"
+                        })
+                    </div>
+                     <div class="swiper-slide">
+                        @@include('event-card.html', {
+                            "class": "",
+                               "img": "assets/images/events/hatters.jpg",
+                               "img_webp": "assets/images/events/hatters.webp",           
+                               "img_tablet": "assets/images/events/hatters-tablet.jpg",     
+                               "img_tablet_webp": "assets/images/events/hatters-tablet.webp",  
+                               "alt": "hatters",
+                               "title": "Повесилимся на славу на концерте The Hatters",
+                               "descr": "Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко",
+                               "datetime": "2026-12-27T10:00",
+                               "time": "27.12.2026 | начало 10.00" 
+                        })
+                    </div>
+                </div>
+
+                <footer class="swiper-footer">
+                   <button type="button" class="swiper-arrow-prev arrow arrow--left">
+                     <svg class="arrow__icon" width="91" height="60">
+                         <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                     </svg>
+                   </button>
+                   <div class="swiper-pagination"></div>
+                   <button type="button" class="swiper-arrow-next arrow">
+                       <svg class="arrow__icon" width="91" height="60">
+                          <use xlink:href="assets/icons/symbols.svg#arrow"></use>
+                       </svg>
+                   </button>
+                </footer>
+            </div>
+            
+            <a href="#" class="upcoming__link link link--all">
+              <span class="link__name">Смотреть все</span>
+            </a>
+            
+            
+        </div>
+    </div>
+</section>

@@ -40,7 +40,7 @@
             <use xlink:href="assets/icons/symbols.svg#user" />
           </svg>
         </a>
-        <button type="button" class="page-header__nav-toggle"></button>
+        <button type="button" class="page-header__nav-toggle" id="js-navToggle"></button>
       </div>
     </div>
   </header>
@@ -135,7 +135,90 @@
                   </time>
                 </a>
               </article>
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/events/Malevish.jpg_mobile_webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/Malevish.jpg_mobile" />
+
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/events/Malevish-tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/Malevish-tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/Malevish.webp" />
+                    <source srcset="assets/images/events/Malevish.jpg" />
+                    <img src="assets/images/events/Malevish.jpg" alt="Malevish" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">
+                    Выставка Малевича в Томске
+                  </h4>
+
+                  <p class="event-card__description">
+                    Это будет самая полная выставка с 1988 года, того времени, когда впервые заговорили о Малевиче. Экспозиция займёт два этажа павильона.
+                  </p>
+
+                  <time datetime="2026-12-23T20:00" class="event-card__time">
+                    23.12.2026 | начало 20.00
+                  </time>
+                </a>
+              </article>
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/events/art.jpg_mobile_webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/art.jpg_mobile" />
+
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/events/art-tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/art-tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/art.webp" />
+                    <source srcset="assets/images/events/art.jpg" />
+                    <img src="assets/images/events/art.jpg" alt="art" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">
+                    Мастер — класс по студийной съемке от Tatler
+                  </h4>
+
+                  <p class="event-card__description">
+                    Фотографы издания расскажут, как им удается создавать потрясающие кадры и что может испортить весь процесс.
+                  </p>
+
+                  <time datetime="2026-12-25T13:00" class="event-card__time">
+                    25.12.2026 | начало 13.00
+                  </time>
+                </a>
+              </article>
+              <article class="event-card listing__event-card">
+                <a href="#" class="event-card__link">
+                  <picture class="event-card__picture">
+                    <source type="image/webp" media="(max-width: 450px)" srcset="assets/images/events/hatters.jpg_mobile_webp" />
+                    <source media="(max-width: 450px)" srcset="assets/images/events/hatters.jpg_mobile" />
+
+                    <source type="image/webp" media="(max-width: 1169px)" srcset="assets/images/events/hatters-tablet.webp" />
+                    <source media="(max-width: 1169px)" srcset="assets/images/events/hatters-tablet.jpg" />
+
+                    <source type="image/webp" srcset="assets/images/events/hatters.webp" />
+                    <source srcset="assets/images/events/hatters.jpg" />
+                    <img src="assets/images/events/hatters.jpg" alt="hatters" class="event-card__img" />
+                  </picture>
+                  <h4 class="event-card__title">
+                    Повесилимся на славу на концерте The Hatters
+                  </h4>
+
+                  <p class="event-card__description">
+                    Российская джипси-фолк-рок группа, основанная в 2016 году в Санкт-Петербурге. В основной состав группы входят Юрий Музыченко
+                  </p>
+
+                  <time datetime="2026-12-27T10:00" class="event-card__time">
+                    27.12.2026 | начало 10.00
+                  </time>
+                </a>
+              </article>
             </div>
+
+
+
+
+
             <a href="#" class="listing__link link">Смотреть все</a>
           </section>
 
@@ -290,12 +373,81 @@
 
     </div>
     <!--</div>-->
+
+    <section class="offers home__offers">
+      <div class="offers__container">
+
+        <h4 class="offers__title">я хочу:</h4>
+        <div class="offers__btns">
+          <button class="offers__btn btn btn--red" id="js-eventOpenBtn" type="button">Провести мероприятие</button>
+          <button class="offers__btn btn" type="button">Стать арендатором</button>
+        </div>
+      </div>
+    </section>
+
   </main>
-  <footer class="page-footer"></footer>
+  <footer class="page-footer">
+    <div class="page-footer__container">
+      <div class="page-footer__border"></div>
+      <div class="page-footer__wrapper">
+        <nav class="page-footer__nav">
+          <a href="#" class="page-footer__nav-link">Календарь мероприятий</a>
+          <a href="#" class="page-footer__nav-link">Провести мероприятие</a>
+          <a href="#" class="page-footer__nav-link">Стать арендатором</a>
+          <a href="#" class="page-footer__nav-link">Наши проекты</a>
+          <a href="#" class="page-footer__nav-link">Контакты</a>
+        </nav>
+        <form class="page-footer__form subscribe" action="https://jsonplaceholder.typicode.com/posts" id="js-subscribeForm">
+          <h4 class="subscribe__title">Подпишись и будь в курсе происходящего</h4>
+          <div class="subscribe__wrapper ">
+            <div class="subscribe__input-wrapper">
+              <input type="email" name="email" placeholder="Email" class="subscribe__input" required />
+            </div>
+
+            <button type="submit" class="subscribe__submit">Подписаться</button>
+          </div>
+          <label class="subscribe__check check">
+            <input type="checkbox" class="check__input" name="agree" required checked />
+            <span class="check__mark"></span>
+            <span class="check__label">Согласен на обработку персональных данных</span>
+          </label>
+        </form>
+      </div>
+      <div class="page-footer__social-net">
+        <p class="page-footer__text page-footer__text--m">© Millennials 2022</p>
+        <div class="page-footer__left-down">
+          <a href="#" class="page-footer__text page-footer__text--p">
+            Политика конфиденциальности
+          </a>
+          <a href="#" class="page-footer__text">Cookies</a>
+        </div>
+        <div class="page-footer__socnet">
+          <a href="#" target="_blank" class="page-footer__img">
+            <svg class="page-footer__icon" width="24px" height="24px">
+              <use xlink:href="assets/icons/symbols.svg#max"></use>
+            </svg>
+          </a>
+          <a href="#" target="_blank" class="page-footer__img page-footer__img--2">
+            <svg class="page-footer__icon" width="24px" height="24px">
+              <use xlink:href="assets/icons/symbols.svg#la_vk"></use>
+            </svg>
+          </a>
+        </div>
+        <a href="#" rel="" target="_blank" class="page-footer__right">
+          Создание и продвижение
+
+          <svg class="page-footer__svg" width="56px" height="17px">
+            <use xlink:href="assets/icons/symbols.svg#tagree"></use>
+          </svg>
+
+        </a>
+      </div>
+    </div>
+  </footer>
   <div class="pp" id="eventPP">
     <div class="pp__wrapper">
       <div class="pp__sticky-close">
-        <button type="button" class="pp__x-btn x-btn">
+        <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
           <svg class="x-btn__icon" width="12" height="12">
             <use xlink:href="assets/icons/symbols.svg#x">
           </svg>
@@ -413,7 +565,7 @@
             <button type="submit" class="btn form__submit">
               Отправить
             </button>
-            <button type="button" class="form__close-btn">
+            <button type="button" class="form__close-btn js-ppCloseBtn">
               Закрыть
             </button>
           </div>
@@ -421,6 +573,8 @@
       </div>
     </div>
   </div>
+
+  <script src="scripts/main.min.js"></script>
 </body>
 
 </html>
