@@ -47,6 +47,10 @@
     width: 100%;
     margin: 0 auto;
     padding: 0 40px 40px;
+
+    @media @bw768 {
+        padding: 40px 20px 20px;
+    }
 }
 
 &__title {
@@ -64,6 +68,19 @@
     color: @white;
     letter-spacing: 0.02em;
     z-index: 1;
+
+    @media @bw1020 {
+        margin: -110px -26px 70px;
+        max-width: 463px;
+        padding: 10px 17px;
+    }
+
+    @media @bw768 {
+        margin: -70px 0 40px;
+        font-size: 16px;
+        padding: 10px 20px;
+        line-height: 19px;
+    }
 }
 
 }

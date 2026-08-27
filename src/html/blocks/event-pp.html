@@ -1,9 +1,9 @@
-<div class="pp" id="eventPP">
+<div class="pp" id="js-eventPP">
     <div class="pp__wrapper">
         <div class="pp__sticky-close">
             <button type="button" title="Закрыть" class="pp__x-btn x-btn js-ppCloseBtn">
                 <svg class="x-btn__icon" width="12" height="12">
-                    <use xlink:href="assets/icons/symbols.svg#x">
+                    <use xlink:href="assets/icons/symbols.svg#x" />
                 </svg>
             </button>
         </div>
@@ -12,11 +12,11 @@
                 Заполните форму <br/>
                 и мы подберем площадку 
             </h2>
-            <form class="pp__form form">
+            <form class="pp__form form" id="js-eventForm">
 
                 <div class="form__list">
                     <div class="field form__field form__field--w50">
-                        <h5 field__title>
+                        <h5 class="field__title">
                             Формат мероприятия:
                         </h5>
                         <div class="radio field__radio">
@@ -47,7 +47,11 @@
                     <span class="field__title">
                         Планируемое количество посетителей:
                     </span>
-                    <select class="field__select" name="amount">
+
+                    <select 
+                      class="field__select js-selectric" 
+                      name="amount"
+                    >
                         <option value="20">до 20 человек</option>
                         <option value="100">от 20 до 100 человек</option>
                         <option value="500">от 100 до 500 человек</option>
@@ -55,16 +59,39 @@
                     </select>
                 </label>
 
-                <div class="field form__field form__field--m0">
+                <div class="form__field field js-dateField">
                     <h5 class="field__title">
                         Дата проведения:
                     </h5>
                     <div class="field__date">
                         <div class="field__date-inputs">
-                            <input class="field__date-input" type="text" placeholder="ДД"/>
-                            <input class="field__date-input" type="text" placeholder="MM"/>
-                            <input class="field__date-input field__date-input--year" type="text" placeholder="ГГГГ"/>
+                            <input 
+                              class="field__date-input js-dateDay" 
+                              type="text" 
+                              placeholder="ДД"
+                              readonly
+                            />
+                            <input 
+                              class="field__date-input js-dateMonth" 
+                              type="text" 
+                              placeholder="MM"
+                              readonly
+                            />
+                            <input
+                              class="field__date-input field__date-input--year js-dateYear" 
+                              type="text" 
+                              placeholder="ГГГГ"
+                              readonly
+                            />
                         </div>
+
+                        <input
+                          class="field__date-picker js-dateInput"
+                          type="text"
+                          name="date"
+                          readonly
+                          required
+                        />
                     </div>
                 </div>
                     </div>
@@ -81,19 +108,44 @@
                 <div class="form__list">
                     <label class="field form__field form__field--w50">
                         <span class="field__label">Имя*</span>
-                        <input class="field__input" type="text" name="name" placeholder="Имя" required/>
+                        <input 
+                        class="field__input" 
+                        type="text" 
+                        placeholder="Имя" 
+                        name="name" 
+                        required
+                        />
                     </label>
+
                     <label class="field form__field form__field--w50">
                         <span class="field__label">Фамилия*</span>
-                        <input class="field__input" type="text" name="surname" placeholder="Фамилия" required/>
+                        <input 
+                        class="field__input" 
+                        type="text" 
+                        placeholder="Фамилия" 
+                        name="last_name" 
+                        required
+                        />
                     </label>
                     <label class="field form__field form__field--w50">
                         <span class="field__label">Телефон*</span>
-                        <input class="field__input" type="tel" name="phone" placeholder="Телефон" required/>
+                        <input 
+                        class="field__input js-mobileMask" 
+                        type="tel" 
+                        name="phone" 
+                        placeholder="Телефон" 
+                        required
+                        />
                     </label>
                     <label class="field form__field form__field--w50">
                         <span class="field__label">Email*</span>
-                        <input class="field__input" type="email" name="email" placeholder="Email" required/>
+                        <input 
+                        class="field__input" 
+                        type="email"  
+                        placeholder="Email"
+                        name="email"
+                        required
+                        /> 
                     </label>
                 </div>
                
@@ -105,14 +157,22 @@
                     <textarea class="field__textarea" name="Пожелания"></textarea>
                 </label>
 
-                <label class="check form__check">
-                    <input class="check__input" type="checkbox" name="agree" required checked/>
+                <div class="form__check-list">
+                  <label class="check form__check">
+                    <input 
+                     type="checkbox" 
+                     name="agree"
+                     class="check__input"
+                     required 
+                     checked
+                     />
                     <span class="check__mark"></span>
                     <span class="check__label check__label--fz14">
                     Я соглашаюсь с пользовательским соглашением и с политикой
                      использования персональных данных
                     </span>
-                </label>
+                  </label>
+                </div>
 
                 <div class="form__btns">
                     <button type="submit" class="btn form__submit">

@@ -12,9 +12,21 @@
         min-width: 340px;
         width: calc(33.3333% + 28px) !important;
 
+         @media @bw1340 {
+            padding-right: 40px;
+         }
+
         @media @bw1020 {
             width: 280px;
         }
+
+        @media @bw768 {
+            padding-right: 30px;
+         }
+
+          @media @bw450 {
+            padding-right: 20px;
+         }
     }
     & > * {
         width: 100%;

@@ -31,13 +31,7 @@
         margin: 0 0 10px;
         font-weight: 700;
         font-size: 18px;
-    }
-    &__date-inputs {
-        display: flex;
-        gap: 15px;
-        width: 100%;
-        height: 55px;
-    }
+   
     &__date-input {
         box-sizing: border-box;
         display: block;
@@ -48,8 +42,51 @@
         background-color: @white;
         padding: 17px 13px 16px;
         text-align: center;
+        font-size: 16px;
+
+        @media @bw400 {
+            font-size: 14px;
+        }
         &--year {
             width: 110px;
+        }
     }
-}
+
+    &__date-picker {
+      box-sizing: border-box;
+      position: relative;
+      width: 100%;
+      max-width: 250px;
+      height: 55px;
+      border-radius: 5px;
+      opacity: 0;
+      cursor: pointer;
+    }
+      //  ВСТАВИТЬ 
+    &__date {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        max-width: 250px;
+        width: 100%;
+    }
+     //  ВСТАВИТЬ СЮДА 
+    &__date-inputs {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      gap: 15px;
+      width: 100%;
+      height: 55px;
+      pointer-events: none;
+      }
+       
+    }
+    span.error,
+    label.error {
+    display: block;
+    margin: 5px 0 0;
+    }
+
 }
